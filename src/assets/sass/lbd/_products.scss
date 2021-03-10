@@ -1,0 +1,100 @@
+.table{
+   
+   .radio,
+   .checkbox{
+        position: relative;
+        height: 20px;
+        display: block;
+        width: 20px;
+        padding: 0px 0px;
+        margin: 0px 5px;
+        text-align: center;
+        
+        .icons{
+            left: 5px;
+        }
+   }
+   > thead > tr > th,
+   > tbody > tr > th,
+   > tfoot > tr > th,
+   > thead > tr > td,
+   > tbody > tr > td,
+   > tfoot > tr > td{
+       padding: 12px 8px;
+       vertical-align: middle;
+   }
+   
+    > thead > tr > th{
+        border-bottom-width: 1px;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        color: $dark-gray;
+        font-weight: $font-weight-normal;
+        padding-bottom: 5px;
+    }
+
+   .td-actions .btn{
+        @include opacity(0.36);
+    
+        &.btn-xs{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+    .td-actions{
+        min-width: 90px;
+    }
+    
+    > tbody > tr{
+        position: relative;
+        
+        &:hover{
+            .td-actions .btn{
+                @include opacity(1);
+            }
+        }
+    }
+} 
+
+
+///dropdown
+
+.dropbtn {
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: rgb(84, 84, 245);
+  }

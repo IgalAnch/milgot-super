@@ -1,0 +1,71 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Products</h4>
+                        <p class="category">Manage your products here</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <!--filters to sort by-->
+                        <div class="dropdown">
+                            <button class="dropbtn">Types</button>
+                            <div class="dropdown-content"><!--UNFINISHED-->
+                            <div *ngFor="let row of categ.productTypes; let ro=index" style="display:block"><label class="check">
+                                <input type="checkbox">
+                                <span style="margin-left: 5px;">{{categ.productTypes[ro].typename}}</span>
+                            </label></div>
+                            </div>
+                        </div>
+                          <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>name</th>
+                                        <th>type</th>
+                                        <th>image</th>
+                                        <th>status</th>
+                                        <th>administration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let row of prod.products; let ro=index;">
+                                        <td>{{prod.products[ro].id}}</td>
+                                        <td>{{prod.products[ro].name}}</td>
+                                        <td>{{prod.products[ro].type}}</td>
+                                        <td>{{prod.products[ro].image}}</td>
+                                        <td>Active</td>
+                                        <td><button (click)="redirectToProd(prod.products[ro].id)">Edit</button><button style="color: rgb(238, 93, 93); margin-left: 15px">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                          </table>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="header">
+                        <h4 class="title">Table on Plain Background</h4>
+                        <p class="category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let cell of tableData2.headerRow">{{ cell }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let row of tableData2.dataRows">
+                                    <td *ngFor="let cell of row">{{cell}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
